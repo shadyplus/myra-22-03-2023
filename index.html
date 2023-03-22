@@ -1,0 +1,1012 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<script src="js/jquery.min.js"></script>
+
+    <script>
+    function set_validator_errors(){
+        orderValidator.errorTitle = 'Пожалуйста, исправьте следующие ошибки'; 
+
+        orderValidator.errorNameField = 'Имя'; 
+        orderValidator.errorNameMess = 'Укажите своё имя'; 
+        
+        orderValidator.errorPhoneField = 'Телефон для связи'; 
+        orderValidator.errorPhoneMess = 'Введите правильный телефон'; 
+        
+        orderValidator.errorAddress = 'Введите правильный адрес'; 
+        orderValidator.errorRequired = 'обязательное поле'; 
+        orderValidator.errorMaxLength = 'допустимо максимум {1} символа'; 
+        orderValidator.errorMinLength = 'допустимо минимум {1} символа'; 
+        orderValidator.errorEmailField = 'E-mail';
+        orderValidator.errorEmail = 'указан не корректный email';
+        }
+    </script>
+    
+<script>
+
+
+window.app = {
+    timestamp: parseInt((new Date()).getTime() / 1000),
+    jq: jQuery,
+    formAction: window.location.href,
+    leadToken: '641b0f1002f7a9.56203534',
+    offers: {"26337":{"id":26337,"country":{"code":"BY","name":"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c"},"price":"0","price2":"99","currency":{"code":"BYR","name":"BYN"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""},"22721":{"id":22721,"country":{"code":"RU","name":"\u0420\u043e\u0441\u0441\u0438\u044f"},"price":"0","price2":"2780","currency":{"code":"RUB","name":"\u0440\u0443\u0431"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""}},
+    currentOffer: {"id":22721,"country":{"code":"RU","name":"\u0420\u043e\u0441\u0441\u0438\u044f"},"price":"0","price2":"2780","currency":{"code":"RUB","name":"\u0440\u0443\u0431"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""},
+    allowedCountries: ["BY","RU"],
+    _setOfferId: false,
+    streamHid: '',
+    showcaseUrl: '',
+    disablePhoneMask: Boolean(),
+    
+    setOffer: function (offerId) {
+        if (offerId == this._setOfferId) {
+            return ;
+        }
+        this._setOfferId = offerId;
+        if (offerId) {
+            var offer = app.offers[offerId];
+            var previousOffer = app.currentOffer;
+            app.currentOffer = offer;
+            var event = this.jq.Event("offerchange");
+            event.previousOffer = previousOffer;
+            event.currentOffer = app.currentOffer;
+            this.jq(document).trigger(event);
+            this.updatePage(offer);
+        } else {
+            $('input[name=country]').val('');
+        }
+    },
+    
+    updatePage: function(offer) {
+        $('x-newprice').html(offer.price);
+        $('x-oldprice').html(offer.price2);
+        $('x-currency').html(offer.currency.name);
+        $('input[name=offer], select[name=offer]').val(offer.id);
+        $('input[name=country]').val(offer.country.code);
+    },
+
+    blockForm: function() {
+        // Блокируем кнопки при отправке формы
+        $('input[type=submit]', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        $('button', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        app.incompleteOrder.lock = true;
+        clearTimeout(app.incompleteOrder.timer);
+    },
+
+    unblockForm: function() {
+        $('input[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        $('button[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        app.incompleteOrder.lock = false;
+        clearTimeout(app.incompleteOrder.timer);
+    }
+
+};
+
+
+ </script>
+ <script src="js/form.validate.js"></script> 
+<script src="js/main2.js"></script>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أفضل طريقة لفقدان الوزن بسهولة و أمان 
+  </title>
+<link rel="stylesheet" type="text/css" href="css/index.css" media="all">
+<link rel="shortcut icon" href="empty.ico" type="image/x-icon">
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="css/geo_comebacker.css">
+</head>
+<body>
+<style>
+    .pl_dat_code_block {
+        display: none !important;
+    }
+</style>
+<style>
+    .pl_country_block {
+        display: none;
+    }
+</style>
+
+
+<div class="sazonov66_g9ysODlqt">
+<div class="katyakoncakova_FtFDdVex">
+<div class="alex_zevsa_wcih4ECQW clearfix">
+<a href="#to_form" class="Natali0610_RVdHBJiwC" style="cursor: pointer;">
+<h1>صحتك اليوم </h1>
+</a>
+<div class="mikstroy_hlTMvYzPJs">
+
+<div class="tata_soboleva_XjcqhmYZ7">
+<div id="search" name="search"><a href="#to_form"><input class="tjn-02_ANHUDPcR" maxlength="80" name="q" placeholder="بحث" type="search"></a></div>
+</div>
+<div class="vasilusya_rfYcdWbD"></div>
+</div>
+</div>
+<div class="puzzle_LTiRtzPGfe" style="overflow:hidden">
+<div class="alex_zevsa_wcih4ECQW">
+<ul class="main-menu-blk clearfix" style="overflow:hidden">
+<li class="germantrava_IeZ6X4Esi9"><a href="#to_form">منظمة</a></li>
+<li><a href="#to_form"> الصحة </a></li>
+<li><a href="#to_form">نشاط</a></li>
+<li><a href="#to_form">ملفات</a></li>
+<li class="selected"><a href="#to_form">مركز الاتصال</a></li>
+<li class="shev_V7Mo2liaeP"><a href="#to_form">مسابقات</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="alex_zevsa_wcih4ECQW">
+<div class="zhanna_86_o5IKudBv">
+<div class="renul_seDwyoGn57">
+<div class="alstep54_sglCGFT6q"><a href="#to_form">الصفحة الرئيسية</a><span class="altakansk_YrlOq5h6N">→</span>
+    <a href="#forms">أخبار</a><span class="altakansk_YrlOq5h6N">→<span class="altakansk_YrlOq5h6N"></span><a href="#forms">فقدان الوزن</a>
+    <span class="altakansk_YrlOq5h6N"></span></span></div>
+<h2>
+<font color="darkred">دكتور اوليغ :<br>«الوزن الزائد هو أهم مشكلة في الجهاز الهضمي.
+    إذا كان الجهاز الهضمي  يعمل بشكل صحيح ، فسوف يفقد الشخص وزنه مقابل الوزن الأمثل له ولن يكتسب الوزن مرة اخرى.
+    ليس من الضروري اللجوء إلى الطرق الغير مفيدة والانظمة الغذائية .
+    »</font>
+</h2>
+<div class="Genrik91_k2XdOzZlq1">
+<p> يجاوب علينا اليوم الدكتور (أوفاتوف أوليغ فاليريفيتش) , ممارس عام ، دكتور من أعلى فئة ، دكتور في العلوم الطبية ، أستاذ
+    , رئيس قسم العلاج العام وطب الأسرة . سوف يخبرنا  لماذا يلجأ الناس إلى طرق مختلفة لفقدان الوزن و مع ذلك  لا يمكنهم خسارة  وزنهم .
+   </b>.</p>
+<div style="clear: both;"></div>
+<div class="content-left-doctor">
+<div class="content-left-doctor-foto"><img src="img/ded.png">
+</div>
+<p class="myp"><b>يجيب علي أسئلتنا اليوم :<br>أوفاتوف أوليغ فاليريفيتش
+    <br></b></p>
+<p>ممارس عام ,، دكتور من أعلى فئة 
+</span>دكتور في العلوم الطبية  , , رئيس قسم العلاج العام وطب الأسرة 
+<br>
+<b> سنوات الخبرة 36 سنة </b>
+</p>
+</div>
+<p>«تعمل الأنظمة الغذائية منخفضة السعرات الحرارية و المنتجات الاصطناعية ضد صحتك. نعم ، يمكن أن تعطي تأثيرًا مؤقتًا ، ولكن بعد7 أسابيع سوف "تضعف" عملية التمثيل الغذائي لديك. سيبدأ الجسم في طلب الحلويات وتراكم الدهون وتوفير الطاقة. لذلك ، بعد محاولة فاشلة لإنقاص الوزن ، تكتسب وزناً  أكثر مما كانت عليه.</p>
+<p>تعتبر التمارين الرياضية أو الحبوب أو شفط الدهون أيضًا من الطرق الرئيسية لفقدان الوزن اليوم ، ولكن مع استمرار زيادة عدد الأشخاص الذين يعانون من السمنة المفرطة ، لم تعد أي من هذه الطرق فعالة.
+
+</p>
+<p>لحسن الحظ ، يوجد حل  حديث ، لكن أولاً سنحلل  مشاكل زيادة الوزن.
+
+</p>
+<p style="font-size: 25px; font-weight: 700;line-height: 30px;">لماذا الوزن الزائد خطر؟
+
+</p>
+<p> تحتل مشاكل  القلب والأوعية الدموية المرتبة الأولى من بين المشاكل الرئيسية الناجمة عن زيادة الوزن: ارتفاع ضغط الدم الشرياني (ارتفاع ضغط الدم) و مشاكل  القلب والسكتة الدماغية والنوبات القلبية . 
+
+</p>
+<p>في المرتبة الثانية هو مشكلة  السكري الذي 2022 اتخذ على  شكل وباء عالمي. على مدى السنوات العشر الماضية ، ارتفع معدل الإصابة بمرض السكري بنسبة 52 ٪.
+
+</p>
+
+<p style="font-size: 25px; font-weight: 700;line-height: 30px;">الوزن الزائد - بسبب ضعف التمثيل الغذائي.
+
+</p>
+<p>نعلم جميعًا أن هناك أشخاصًا يأكلون أي شيء وبأي كمية ويظلون نحيفين ولياقتهم  البدنية عالية . والبعض ينتظمون  بنظام غذائي ، وممارسة الرياضة ، ولا يزالون يكتسبون الوزن . تؤكد الدراسات الحديثة أن بيت القصيد هو في عملية التمثيل الغذائي ، أو بالأحرى في الاضطرابات الأيضية للأشخاص الذين يعانون من زيادة الوزن.
+
+
+</p>
+<p style="font-size: 25px; font-weight: 700;line-height: 30px;">لمذا لا تنفع الأنظمة الغذائية مع بعض الناس ؟ 
+</p>
+<p>إذا بدأت في الحفاظ على نظام غذائي ، فإن كمية أقل من السعرات الحرارية تدخل الجسم ، وبالنسبة للجسم فهذه علامة على أن "الجوع" قد بدأ. يتم تنشيط ردود الفعل الوقائية ومن أجل حمايتك (على مدى آلاف السنين من الوجود البشري ، تم تطوير عمليات معينة لحماية الجسم من الجوع) ، يبدأ الجسم في تخزين أكبر قدر ممكن من الطاقة على شكل دهون الاحتياطيات وتنفق أقل قدر ممكن. يصبح الشخص كسولًا ولا مباليًا ، من المستحيل فعل أي شيء. وفي نفس الوقت ، يحاول الجسم تخزين كل طاقة الطعام على شكل دهون في  الجسم  لحمايتك  (هذا مجرد رد فعل دفاعي للجسم).
+
+
+</p>
+<p style="font-size: 25px; font-weight: 700;line-height: 30px;">لماذا لا تساعد التمارين الرياضية الجميع على إنقاص الوزن؟
+
+</p>
+<p>
+    كيف يتم الحصول على الطاقة في الجسم من الغذاء:
+
+</p>
+<p>
+<img class="image-info-stat" src="img/top3.jpg" style="float: left; padding-right: 10px;">
+كما ترى بوضوح ، يتم إنفاق جزء صغير فقط من الطاقة المتلقاة من الطعام على العضلات. وهكذا ، عندما تحاول حرق الدهون بالنشاط البدني ، عليك أن تتعرق كثيرًا جدًا ، لأن الجسم منظم بحيث يتم إنفاق جزء صغير جدًا من الطاقة على العضلات.
+ <br>
+ وإلا لما كنا قادرين على التحرك بعد يوم من عدم الأكل . ببساطة لن تكون هناك قوة متبقية للتحرك ، ويمكن لأي شخص أن يعيش بدون طعام لفترة طويلة جدًا. في الأيام السبعة إلى العشر الأولى بدون طعام ، لن يكون هناك خطر على الصحة. لذلك ، في معظم الحالات ، لا تعطي التمارين الرياضية  التأثير المطلوب.
+
+</p>
+<p style="font-size: 25px; font-weight: 700;line-height: 30px;">ما الطريقة  الجديدة للتخلص من مشاكل الوزن الزائد التي تحدثت عنها سابقاً؟
+
+
+</p>
+<p>تمكن العلم من الوصول إلى مكمل غذائي ممتاز للمساعدة على فقدان الوزن بأمان و سهولة .
+</p>
+<p>
+    يُطلق على المنتج اسم "MYRALOSE " وهو مركب مفيد يضاعف  معدل الأيض ويحفز فقدان الوزن الطبيعي .
+
+</p>
+<p>بفضل المكونات المختارة بعناية ، يتغلغل في أعماق الجسم مع التغذية الطبيعية ويؤثر بشكل انتقائي على بنية دهون الجسم. يتم تطبيع نظام التمثيل الغذائي في الجسم ، وتختفي رواسب الدهون بشكل طبيعي.
+
+
+</p>
+<p style="color:#c72525"><b>في شهر واحد ، يمكنك أن تخسر الكثير من الكيلوجرامات  ، مع تطهير جسمك في نفس الوقت. اتضح أن هذا هو الحل الأمثل.
+
+</p>
+<p style="font-size: 25px; font-weight: 700; line-height: 30px;margin: 25px 0px 10px 0px;">ما هو  MYRALOSE  ؟
+
+</p>
+<p>إذا كان الجسم يفتقر إلى فيتامين سي ، فإننا نأكل برتقالة. إذا كان هناك القليل من الفوسفور ، فإننا نأكل السمك. وماذا نفعل عندما تتراكم الدهون؟ نحن نعذب أنفسنا بنظام غذائي! لكن الطبيعة لا تعمل بهذه الطريقة. واستغرق خبراء التغذية ما يقرب من 8 سنوات لفهم هذه الحقيقة البسيطة.
+
+</p>
+<p>اتضح أنه مع زيادة الوزن يحتاج الجسم إلى العناصر المسؤولة عن تكسير الدهون. على وجه الخصوص ،  مضادات الأكسدة الفائقة التي لا تحرق الدهون  فقط ، بل تحرق أيضًا الدهون الحشوية الأكثر خطورة.
+
+</b></p>
+<p> MYRALOSE     هو مكمل غذائي طبيعي  100%. لقد ثبت أن حبوب حلوة  MYRALOSE تسرع عملية التمثيل الغذائي بنسبة كبيرة جداً  وتزيد من تحلل الدهون (تكسير الدهون) بحوالي 7 مرات (!).
+
+</p>
+<p style="margin: 0px 0px 30px 0px;">إن فقدان الوزن بمقدار كبير  أسبوعياً يرجع إلى تسارع عمليات الجسم الطبيعية . لذلك ، لا تحتاج إلى تعذيب نفسك بالتمارين الرياضية المكثفة واتباع نظام غذائي صارم.
+
+</p>
+<blockquote>
+<p style="line-height: 24px;">نصيحة الدكتور اوليغ : لتحصل على أفضل نتيجة من إستحلاب حبوب حلوة MYRALOSE   ، يجب انت تستحلب حبة إلى حبتين حلوة من MYRALOSE قبل وجبات الطعام او عند الشعور بالجوع .
+
+</p>
+</blockquote>
+<p style="font-size: 20px; font-weight: 700; margin: 25px 0px 30px 0px;"><a href="#to_form" style="text-decoration: none;">MYRALOSE </a>
+    هو الحل الوحيد الآمن والفعال لفقدان الوزن.</p>
+<div style="clear: both;"></div>
+<p class="maki555_e4AaJE9jYG" style="text-indent: 0px; text-align: left; font-size: 17px; line-height: 30px; margin: 0px 0px 30px 0px;     padding: 20px;">
+<b style="    line-height: 24px;
+    display: inline-block;
+    margin-bottom: 12px;"> أهم فوائد المكمل الغذائي MYRALOSE :   </b>
+<br> • حرق الدهون
+<br> • قمع الشهية
+<br> • تطبيع  المستويات الهرمونية
+<br> • تجديد وتطهير الجسم
+<br> • تأثير منشط بسبب حرق كتلة الدهون.<br>
+</p>
+<center><img style="max-width: 700px; width: 100%;" src="img/7771.png" alt="image"></center>
+<p>هذا المنتج هو عبارة عن مكمل غذائي للمساعدة على فقدان الوزن في شكل حبوب حلوة يمكن إستحلابها , و هو مكون من مكونات طبيعية 100% . هذا يعني أنه يحتوي فقط على تلك المكونات الطبيعية التي تساهم في عملية تحلل الدهون. أن MYRALOSE  الغذائي هو المكمل الغذائي  الوحيد الذي يمكنه إزالة الدهون ليس فقط من الوركين والبطن ، ولكن أيضًا من المناطق "الأكثر صعوبة": الذراعين والرقبة. 
+
+
+</p>
+<p>لا تزيل  حبوب حلوة  MYRALOSE   الوزن الزائد فحسب ، بل تحافظ أيضًا على نسبة منخفضة من دهون الجسم. و هذه بعض نتائج إستخدام MYRALOSE  :
+
+</p>
+<p style="text-align: center !important; margin: 20px 0px 15px 0px;"><b>سمية , 37 سنة </b></p>
+<div align="center"><img src="img/ttt.jpg" style="max-width: 500px; width: 90%;"></div>
+<p style="text-align: center !important; margin: 20px 0px 15px 0px;"><b>مريم , 32 سنة </b></p>
+<div align="center"><img src="img/uu.jpg" style="max-width: 500px; width: 90%;"></div>
+<p style="text-align: center !important; margin: 20px 0px 15px 0px;"><b>جليلة , 42 سنة  </b></p>
+<div align="center"><img src="img/yyy.jpg" style="max-width: 500px; width: 90%;"></div>
+<p style="text-align: center !important; margin: 20px 0px 15px 0px;"><b>سيلين , 25 سنة </b></p>
+<div align="center"><img src="img/qqq12.jpg" style="max-width: 500px; width: 90%;"></div>
+<p style="text-align: center !important; font-size: 20px; font-weight: 700; margin: 25px 0px 30px 0px; direction: rtl;"><b>
+    «أثناء إستخدامك لحبوب حلوة MYRALOSE  - يمر الجسم بخمس مراحل من حرق الدهون»</b></p>
+<div class="stadii">
+<ul style="padding: 5px 25px 0px 20px;">
+<li>سحب الماء الزائد. التورم يختفي من الساقين والوجه. خلال هذه الفترة ، أنصحكم  بشرب ما لا يقل عن 1.5 لتر من الماء النظيف يوميًا
+</li>
+<li> تسريع عملية التمثيل الغذائي. سيبدأ الجسم نفسه يبدأ في فقد الوزن بشكل أسرع 
+</li>
+<li>تفعيل تحلل الدهون. تبدأ عملية حرق الأنسجة الدهنية ومعالجتها و تحويلها إلى طاقة. ستشعر بالنشاط والحيوية.
+</li>
+<li> تطهير الأمعاء من السموم. ستشعر بخفة في معدتك.
+</li>
+<li>حرق الدهون الحشوية. يزيل الدهون من الأعضاء الداخلية. لن يؤثر ذلك على الوزن كثيرًا ، لكنه بالتأكيد مفيد للصحة.
+</li>
+</ul>
+</div>
+<p style="font-size: 20px; font-weight: 700; margin: 25px 0px 30px 0px;"><b>مهم : هذا المنتج للبالغين فقط +18 </b></p>
+<p style="text-align: center; font-size: 20px; font-weight: 700; margin: 25px 0px 30px 0px; direction: rtl;"><b>
+    ما هي مكونات MYRALOSE ؟
+</b></p>
+<div class="stadii">
+<ul style="padding: 5px 25px 0px 20px;">
+<li>
+    الكافيين
+</li>
+<p>الكافيين هو محفز للجهاز العصبي المركزي يعمل على زيادة معدل الأيض وتحفيز حرق الدهون. يمكن أن يساعد الكافيين في تقليل الشهية وزيادة الطاقة والتحفيز العام.
+
+</p>
+<li>
+    التورين
+</li>
+<p>التورين هو حمض أميني يوجد بشكل طبيعي في الجسم ويعمل على تعزيز عملية الأيض وتحسين وظائف الجهاز العصبي المركزي. يمكن أن يساعد التورين في تحفيز الطاقة وتحسين الأداء البدني.
+
+</p>
+<li>
+    مستخلص الزنجبيل
+
+</li>
+<p>خلاصة الزنجبيل هي مادة طبيعية مضادة للأكسدة ومضادة للالتهابات. يمكن أن تساعد خلاصة الزنجبيل في تقليل التهابات الجسم وتحسين الجهاز الهضمي.
+
+</p>
+<li>
+    فيتامين ب3
+
+</li>
+<p>فيتامين ب3 (نياسين) هو فيتامين مهم لصحة الجلد والأعصاب والجهاز الهضمي والأيض. كما أن يساعد فيتامين ب3 في تقليل مستويات الكوليسترول الضار في الجسم وتحسين وظائف الجهاز الهضمي.
+
+</p>
+<li>
+    فيتامين ب5
+
+</li>
+<p>فيتامين ب5 (البانتوثنيك) هو فيتامين ضروري لصحة الجلد والشعر والأظافر والجهاز الهضمي. كما أن يساعد فيتامين ب5 في تحسين عملية الأيض وتحسين وظائف الجهاز الهضمي.
+
+</p>
+<li>
+    فيتامين ب6
+
+</li>
+<p>فيتامين ب6 (البيريدوكسين) هو فيتامين ضروري لصحة الجهاز العصبي والجهاز المناعي والأيض. يمكن أن يساعد فيتامين ب6
+
+</p>
+
+</ul>
+</div>
+
+
+
+<div class="content-left-doctor">
+<!-- <div class="content-left-doctor-foto" align="center"><img src="img/wx2.jpg" style="max-width: 300px; width: 90%;"> -->
+</div>
+</div>
+
+<center><img style="max-width: 800px; width: 100%;" src="img/product.png" alt="image"></center>
+
+<br>
+<blockquote>
+<p style="line-height:24px">ثبت, ان شهري  <script>
+                  var appendNull = function(num) {
+                    return num < 10 ? 0 + num.toString() : num;
+                  };
+                  d = new Date();
+                  p = new Date(d.getTime() - 0 * 86400000);
+                  monthb = 'يناير, فبراير, مارس, ابريل , مايو, يونيو, يوليو, اغسطس, سبتمبر, اكتوبر, نوفمبر, ديسمبر'.split(
+                    ',');
+                  document.write(appendNull(monthb[p.getMonth()]));
+                  </script> و <script>
+                  var appendNull = function(num) {
+                    return num < 10 ? 0 + num.toString() : num;
+                  };
+                  d = new Date();
+                  p = new Date(d.getTime() - 0 * 86400000);
+                  monthb = 'يناير, فبراير, مارس, ابريل , مايو, يونيو, يوليو, اغسطس, سبتمبر, اكتوبر, نوفمبر, ديسمبر'.split(
+                    ',');
+                  document.write(appendNull(monthb[p.getMonth() + 1]));
+                  </script>
+هما أفضل وقت لبدء إستخدام حبوب حلوة  <a href="#to_form" style="text-decoration: none; color: #bf0000;"><b>MYRALOSE </b></a>.
+بفضل التغيرات في متوسط ​​درجة الحرارة وتسريع عملية التمثيل الغذائي ، يزداد تأثير استخدام المنتج ، ويتم حرق الوزن الزائد بنسبة أكبر بكثير من الطبيعي .
+</p>
+</blockquote>
+
+
+
+
+<center>
+
+<p></p>
+</center>
+</div>
+<span style="max-width: 840px;
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+    padding: 30px 30px;
+    border: 4px double #55a9cd;
+    border-radius: 3px; line-height: 30px;"><b>ملحوظة : </b> لطلب حبوب حلوة MYRALOSE عليك المشاركة بالأسفل بمسابقة للحصول على تخفيض يصل إلى 50%!  <br> عن طريق الضغط علي الصناديق بالأسفل و إذا كنت محظوظاً سوف تحصل علي تخفيض كبير! <b>
+<font color="red">
+</font>
+</b>
+ </span>
+<p></p>
+<div class="zakaz"></div>
+<br>
+<p id="forms"></p>
+<p id="to_form"></p>
+<div class="boxes">
+<div class="boxes__instructions" id="roulette">
+<div>↓</div>
+<div style="line-height: 25px; font-size: 19px;">تخفيض خاص لمواطنين الجزائر حتى 50%! </div>
+<div>↓</div>
+</div>
+<br>
+<div id="boxes" class="boxes__wrapper" >
+<div id="0"><img src="img/closed_box.png" class="try"></div>
+<div id="1"><img src="img/closed_box.png" class="try"></div>
+<div id="2"><img src="img/closed_box.png" class="try"></div>
+<div id="3"><img src="img/closed_box.png" class="try"></div>
+<div id="4"><img src="img/closed_box.png" class="try"></div>
+<div id="5"><img src="img/closed_box.png" class="try"></div>
+<div id="6"><img src="img/closed_box.png" class="try"></div>
+<div id="7"><img src="img/closed_box.png" class="try"></div>
+<div id="8"><img src="img/closed_box.png" class="try"></div>
+</div>
+<div id="discount" class="boxes__discount"><img src="img/discount100.png">
+</div>
+<div id="boxes__shadow"></div>
+<div class="sweet-overlay" tabindex="-1"></div>
+<div class="sweet-alert animated bounceIn" id="modal02">
+<div class="sa-icon sa-success" id="success02">
+<span class="sa-line sa-tip" id="successtip02"></span>
+<span class="sa-line sa-long" id="successlong02"></span>
+<div class="sa-placeholder"></div>
+<div class="sa-fix"></div>
+</div>
+<p style="text-align: center;">تبقى لك محاولة واحدة. <br>حاول مرة اخرى !</p>
+<button id="update" onclick="hidemodal02()" style="text-decoration:none!important">OK</button>
+</div>
+</div>
+<div class="order_block">
+<div id="form" class="api-form1">
+<div class="form-header1">
+<div class="cta-form1">
+<div class="product-image1">
+<img src="img/product.png" style="width:88%!important">
+</div>
+</div>
+</div>
+<div class="form-body">
+<div class="text">إملأ النموذج لتحصل على  <br><span class="offer-name">«MYRALOSE»</span>
+<span class="new_price">بتخفيض 50%!</span>
+</div>
+<div>
+    <h1>السعر قبل التخفيض <span style="text-decoration: line-through;">11980 D.A </span></h1>
+    <h1 style="font-size: 37px;">السعر بعد التخفيض <span >5990 D.A </span></h1>
+    <p style="text-align: center !important;"> عند شرائك دورة MYRALOSE </p>
+</div>
+<div class="deadline1"><b> كل ما عليك هو ان تكتب إسمك و رقم هاتفك و بعدها سوف يتم التواصل معك من قبال المختصين لتأكيد عنوان الوصول  باقي على نهاية التخفيض الخاص بك : <br><span class="time_remains" id="min">10</span> : <span class="time_remains" id="sec">00</span></b></div>
+<form id="form1" class="orderForm landing__form" action="" method="POST">
+        <input name="csrf_token" type="hidden" value="e9bb97591ddfd0645932fde927db51be:1679494928" />
+    
+    <input type="text" class="name" name="name" maxlength="30" placeholder=" ادخل إسمك :">
+<input type="tel" class="name phone-black" name="phone" id="phoneNumber" placeholder="أدخل رقم هاتفك ">
+<button class="btn1 px30 bold upp white blg opacity" type="submit">الحصول على MYRALOSE  <span class="new_price">بتخفيض 50%</span></button>
+</form>
+</div>
+</div>
+</div>
+<div class="spin-result-wrapper">
+<div class="pop-up-window" style="font-family: open sans;">
+<div class="close-popup"></div>
+<span class="pop-up-heading">مبروك! </span>
+<p class="ruletka-p pop-up-text" style="margin: 10px 0px 0px 0px;">سوف تتمكن من الحصول على MYRALOSE بخصم  <span class="danger-text"><span class="new_price">50%*</span>!</span></p>
+<br>
+<div class="to_form" style="text-decoration:none!important"><span class="pop-up-button">OK</span></div>
+</div>
+</div>
+</div>
+<br><br>
+<div class="vk-container">
+<div class="vk-header">
+<div class="vk-header-text"><span class="comment-count">203 تعليقات اليوم </span></div>
+</div>
+<br>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/w1.jpg">
+</div>
+<div class="vk-comment-name">أميرة
+</div>
+<div class="vk-comment-text">لسوء الحظ ، لم أفز بأي شيء ، لقد طلبت MYRALOSE بالسعر الكامل دون خصم. لكن انا متأكدة سوف يساعدني على فقدان 15 كجم اللذين اريد ان افقدهم ! حظا طيبا للجميع!
+
+
+<!--<br><img src="img/or1.jpg" alt="" style="width:100%;max-width:320px;margin-top:10px">-->
+</div>
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/w2.jpg">
+</div>
+<div class="vk-comment-name">كريمة  </div>
+<div class="vk-comment-text">إنه منتج جيد تمامًا. لقد جربته بالفعل , لقد فقدت وزني حقًا وقبل كل شيء أحافظ على صحتي.
+
+
+</div>
+<br>
+<img src="img/comm4.jpg" style="max-width: 550px; width: 90%;">
+
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/hanaa.jpg">
+</div>
+<div class="vk-comment-name">هناء </div>
+<div class="vk-comment-text">كريمة، رائع! أنا أيضًا قررت التخسيس هذا العام! لم أفهم شيئًا واحدًا: حتى لو إستخدمت حبوب حلوة MYRALOSE، هل لا يزال يتعين عليّ اتباع نظام غذائي؟
+
+
+</div>
+<br>
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/w3.jpg">
+</div>
+<div class="vk-comment-name">فاطمة</div>
+<div class="vk-comment-text"> قرأت الكثير عن هذا المنتج على الإنترنت، أنا وزوجي نريد أن نجربه، نريد أن نفقد الوزن. نحن متحمسون للغاية، وننتظر بفارغ الصبر وصول المنتج ...
+
+
+</div>
+<br>
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/w4.jpg">
+</div>
+<div class="vk-comment-name">مريم</div>
+<div class="vk-comment-text"> لقد أخذته لمدة شهر، بعض أصدقائي تناولوه لفترة أطول قليلاً. لكن النتائج كانت مرئية بالفعل بعد أيام من الاستخدام. إليكم صوري. خسيت بوضوح.</div>
+<br>
+<img src="img/eeee.jpg" style="max-width: 400px; width: 90%;">
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/koom6.jpg">
+</div>
+<div class="vk-comment-name">ريم </div>
+<div class="vk-comment-text"> أريد مشاركة نتائجي معكم،لدي نتائج جيدة حقا. أنا مندهشة من فعاليته، هذا المنتج يساعد حقا. أنا سعيدة جداً. لقد تغيرت حياتي للأفضل! انظروا، وهنا نتائجي. من البداية إلى نهاية التجربة.
+
+    <br>
+<img src="img/keto3.jpg" style="max-width: 550px; width: 90%;">
+</div>
+<div class="vk-comment-date">час назад</div> 
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/kamilia.jpg">
+</div>
+<div class="vk-comment-name">كاميليا </div>
+<div class="vk-comment-text"> لقد طلبته و بالفعل إستلمته و هذا هو شكل العبوة .
+
+    <br><img src="img/comm3.jpg" style="max-width: 400px; width: 90%;">
+<!--    <br><a href="#"><img src="/otz8.jpg" alt="" style="width:100%;max-width:320px;margin-top:0px"></a>-->
+</div>
+<div class="vk-comment-date">34 минуты назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/koom8.jpg">
+</div>
+<div class="vk-comment-name">لبنى    </div>
+<div class="vk-comment-text">سوف اطلبه أنا ايضا. النتائج لا تصدق! أود الحصول على هذا المنتج. لقد رأيت أن عدد العبوات محدودة، .
+
+
+<br><img src="img/keto4.jpg" style="max-width: 520px; width: 90%;">
+</div>
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/may.jpg">
+</div>
+<div class="vk-comment-name">مي     </div>
+<div class="vk-comment-text">سوف اطلبه ايضا! لي ولأمي وجدتي وصديقتي التي تعاني من السمنة لفترة طويلة ولا شيء يساعدهم ...
+
+
+</div>
+<br>
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/soha.jpg">
+</div>
+<div class="vk-comment-name">سها </div>
+<div class="vk-comment-text"> لقد جربت هذا المنتج أيضًا! ليس لديكم فكرة، لقد فقدت عدة كيلوجرامات وأتباهى بذلك! ها هي نتائجي! الآن الكثير من أصدقائي يرغبون في طلب هذه الحبوب الحلوة لأنفسهم وعائلاتهم! لذلك، سوف أطلب حزم أكثر بالنسبة لي أيضا!
+
+
+</div>
+<br>
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment-load">
+<div class="vk-avatar"><img src="img/hala.jpg">
+</div>
+<div class="vk-comment-name">هالة </div>
+<div class="vk-comment-text"> لقد صدمت! نتائج مدهشة!
+
+
+</div>
+<br>
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment-load">
+<div class="vk-avatar"><img src="img/samya.PNG">
+</div>
+<div class="vk-comment-name">سامية  </div>
+<div class="vk-comment-text"> جربت هذا المنتج وفقدت وزني أيضًا! هذا المنتج مناسب لي تمامًا. كنت سمينًا ولم يحبني أحد ... الآن لدي صديقة، لقد فقدت وزني بسرعة. إليكم صوري!
+
+    <br><img src="img/keto7.jpg" style="max-width: 400px; width: 90%;">
+</div>
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment-load">
+<div class="vk-avatar"><img src="img/samy.jpg">
+</div>
+<div class="vk-comment-name">رامي </div>
+<div class="vk-comment-text">سوف اطلبه على الفور! أنا بدين أيضًا ... لحسن الحظ، هذا المنتج مناسب أيضًا للرجال.
+
+
+</div>
+<br>
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment-load">
+<div class="vk-avatar"><img src="img/mohaned.jpg">
+</div>
+<div class="vk-comment-name">محمد </div>الغذائي لفقدان الوزن وأعجبت به حقًا. لقد شعرت بتحسن في مستويات الطاقة والتركيز وكان لي القدرة على التحكم في شهيتي وتناول كميات أقل من الطعام. كما لاحظت نتائج إيجابية في فقدان الوزن خلال فترة قصيرة من الاستخدام.
+
+<div class="vk-comment-date">час назад</div>
+
+</div>
+<br>
+
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/koom13.jpg">
+</div>
+<div class="vk-comment-name">جمال </div>
+<div class="vk-comment-text">لقد كانت تجربتي جيدة حتى الآن. لقد لاحظت زيادة في مستويات الطاقة والتركيز، وشعرت بتحسن في مزاجي ونومي. كما لاحظت تقدمًا في فقدان الوزن وتقليل الدهون في الجسم
+</div>
+<br>
+<div class="vk-comment-date">час назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/koom14.jpg">
+</div>
+<div class="vk-comment-name">فريدة </div>
+<div class="vk-comment-text">لقد جربته لمدة شهرين و بالفعل النتائح فارقة جداً , شكراً لكم ! 
+</div>
+<br>
+<img src="img/فق.jpg" style="max-width: 400px; width: 90%;">
+
+<div class="vk-comment-date">57 دقيقة مضت</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/ameen.jpg">
+</div>
+<div class="vk-comment-name">أمين </div>
+<div class="vk-comment-text">اود تجربته سوف احاول طلبه الأن .
+</div>
+<br>
+<div class="vk-comment-date">55 دقيقة مضت</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/basem.jpg">
+</div>
+<div class="vk-comment-name">باسم</div>
+<div class="vk-comment-text">أفضل شيء بالنسبة لي ان الدفع بعد الإستلام و هو شيء مريح جداً .
+</div>
+<br>
+<div class="vk-comment-date">52 минуты назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/abdalla.png">
+</div>
+<div class="vk-comment-name">عبد الله </div>
+<div class="vk-comment-text">لقد إستلمته بالفعل و الخدمة كانت ممتازة و سوف اجربه و بعد سوف اكتب تجربتي .
+</div>
+<br>
+<div class="vk-comment-date">51 минуту назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/khaled.jpg">
+</div>
+<div class="vk-comment-name">خالد</div>
+<div class="vk-comment-text">هل هو مناسب للرجال ؟؟ 
+</div>
+<br>
+<div class="vk-comment-date">50 دقيقة مضت</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/mazen.jpg">
+</div>
+<div class="vk-comment-name">مازن </div>
+<div class="vk-comment-text">خالد , بالطبع هو مناسب للرجال لقد جربته نفسي و أنا استعمله منذ شهر . 
+</div>
+<br>
+<div class="vk-comment-date">48 دقيقة مضت</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/wafaa.jpg">
+</div>
+<div class="vk-comment-name">وفاء</div>
+<div class="vk-comment-text">لقد إستعملته بالفعل و النتائج مذهلة !  !
+<a href="#to_form"></a>
+<br>
+<img src="img/com6foto.jpg" style="max-width: 400px; width: 90%;">
+</div>
+<div class="vk-comment-date">43 минуты назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/koom18.jpg">
+</div>
+<div class="vk-comment-name">دلال</div>
+<div class="vk-comment-text">شيء مذهل شكراً لكم . لقد حصلت على خصم 40%. 
+</div>
+<br>
+<div class="vk-comment-date">39 دقيقة مضت</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/salma.jpg">
+</div>
+<div class="vk-comment-name">سلمى</div>
+<div class="vk-comment-text">يا للهول! لقد حصلت على تخفيض بنسبة 45% أنا سعيدة . 
+</div>
+<br>
+<div class="vk-comment-date">35 دقيقة مضت</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/koom19.jpg">
+</div>
+<div class="vk-comment-name">نادية</div>
+<div class="vk-comment-text">هل يمكن إستخدام هذا المنتج و ايضاً الإستمرار علي نظام غذائي؟ 
+</div>
+<br>
+<div class="vk-comment-date">31 минуту назад</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/koom11.jpg">
+</div>
+<div class="vk-comment-name">شيرين </div>
+<div class="vk-comment-text">لم أحصل على تخفيض . لقد طلبته بسعره كاملاً . 
+<!--    <br><a href="#"><img src="/otz24.jpg" alt="" style="width:100%;max-width:440px;margin-top:10px"></a>-->
+</div>
+<br>
+<div class="vk-comment-date">30 دقيقة مضت</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar"><img src="img/yaseen.jpg">
+</div>
+<div class="vk-comment-name">ياسين</div>
+<div class="vk-comment-text">يا لحظي , لقد فزت بتخفيض 10% فقط . 
+</div>
+<br>
+<div class="vk-comment-date">29 دقيقة مضت</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="page_navigation"><a class="previous_link  no_more" href="#to_form">
+</a> <a href="#to_form" class="page_link  first active_page">1
+</a><a href="#to_form">2</a>
+<a href="#to_form">3</a>
+<a href="#to_form">4</a><a href="#to_form">...</a>
+<a href="#to_form">15</a>
+<a class="next_link" href="#to_form">></a>
+</div>
+<div align="center"><a href="#to_form" class="ord_button">الحصول على المكمل الغذائي MYRALOSE </a></div>
+<br><br>
+</div>
+<br> <br>
+    
+</div>
+</div>
+</div>
+<script>
+    $(function () {
+        $(document).on('mouseenter', 'a', function(){
+            if(!$(this).hasClass('replace_ignoring')){
+                $(this).addClass('replace_ignoring');
+                $(this).attr('href', '#to_form');
+                $(this).removeAttr('target');
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+$('a[href*=#]').bind("click", function(e){
+var anchor = $(this);
+$('html, body').stop().animate({
+scrollTop: $(anchor.attr('href')).offset().top
+}, 1000);
+e.preventDefault();
+});
+return false;
+});
+</script>
+<style>@font-face { font-family: 'Roboto'; src: local('Roboto Thin'), local('Roboto-Thin'), url('css/Robotothin.woff2') format('woff2'), url('css/Robotothin.woff') format('woff'), url('css/Robotothin.ttf') format('truetype'); font-weight: 100; font-style: normal;}@font-face { font-family: 'Roboto'; src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url('css/Robotothinitalic.woff2') format('woff2'), url('css/Robotothinitalic.woff') format('woff'), url('css/Robotothinitalic.ttf') format('truetype'); font-weight: 100; font-style: italic;}@font-face { font-family: 'Roboto'; src: local('Roboto Light'), local('Roboto-Light'), url('css/Robotolight.woff2') format('woff2'), url('css/Robotolight.woff') format('woff'), url('css/Robotolight.ttf') format('truetype'); font-weight: 300; font-style: normal;}@font-face { font-family: 'Roboto'; src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url('css/Robotolightitalic.woff2') format('woff2'), url('css/Robotolightitalic.woff') format('woff'), url('css/Robotolightitalic.ttf') format('truetype'); font-weight: 300; font-style: italic;}@font-face { font-family: 'Roboto'; src: local('Roboto'), local('Roboto-Regular'), url('css/Roboto.woff2') format('woff2'), url('css/Roboto.woff') format('woff'), url('css/Roboto.ttf') format('truetype'); font-weight: 400; font-style: normal;}@font-face { font-family: 'Roboto'; src: local('Roboto Italic'), local('Roboto-Italic'), url('css/Robotoitalic.woff2') format('woff2'), url('css/Robotoitalic.woff') format('woff'), url('css/Robotoitalic.ttf') format('truetype'); font-weight: 400; font-style: italic;}@font-face { font-family: 'Roboto'; src: local('Roboto Medium'), local('Roboto-Medium'), url('css/Robotomedium.woff2') format('woff2'), url('css/Robotomedium.woff') format('woff'), url('css/Robotomedium.ttf') format('truetype'); font-weight: 500; font-style: normal;}@font-face { font-family: 'Roboto'; src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url('css/Robotomediumitalic.woff2') format('woff2'), url('css/Robotomediumitalic.woff') format('woff'), url('css/Robotomediumitalic.ttf') format('truetype'); font-weight: 500; font-style: italic;}@font-face { font-family: 'Roboto'; src: local('Roboto Bold'), local('Roboto-Bold'), url('css/Robotobold.woff2') format('woff2'), url('css/Robotobold.woff') format('woff'), url('css/Robotobold.ttf') format('truetype'); font-weight: 700; font-style: normal;}@font-face { font-family: 'Roboto'; src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url('css/Robotobolditalic.woff2') format('woff2'), url('css/Robotobolditalic.woff') format('woff'), url('css/Robotobolditalic.ttf') format('truetype'); font-weight: 700; font-style: italic;}@font-face { font-family: 'Roboto'; src: local('Roboto Black'), local('Roboto-Black'), url('css/Robotoblack.woff2') format('woff2'), url('css/Robotoblack.woff') format('woff'), url('css/Robotoblack.ttf') format('truetype'); font-weight: 900; font-style: normal;}@font-face { font-family: 'Roboto'; src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url('css/Robotoblackitalic.woff2') format('woff2'), url('css/Robotoblackitalic.woff') format('woff'), url('css/Robotoblackitalic.ttf') format('truetype'); font-weight: 900; font-style: italic;}#created-button-1, #created-button-2{line-height: 1.5em!important;}.my-com-date {color: rgb(91, 95, 101); text-shadow: 0 0 0px #000000; font-weight: 600; line-height: 34px; padding: 1px 4px 1px 4px; background: #fdfdfd; border-radius: 3px;font-size: 20px;} .out-comebacker-content-btn:hover{text-decoration:none!important;transition: 0.3s!important;} .out-comebacker-content-btn:focus{text-decoration: none;color:#fff;} .out-comebacker-content-btn:active{border: 1px solid #fff;} a:active, a:focus { outline: none; } input, textarea {outline:none;}input:active, textarea:active {outline:none;} :focus {outline:none;} textarea {resize:none;}textarea {resize:vertical;}textarea {resize:horizontal;} button:active, button:focus {outline: none !important;}button::-moz-focus-inner {border: 0 !important;} .pl_field_address_info{height: 0;display:block;}.fancybox-overlay{z-index: 99999999!important;}.fancybox-overlay{z-index: 99999999;}.fancybox-wrap{z-index:999999999;}
+</style>
+
+<style>
+    p{
+        direction: rtl;
+        text-align: right !important;
+    }
+    .e-comebacker{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.4);font-size:16px;line-height:normal;z-index:9000}.e-comebacker,.e-comebacker *{font-family:"Open Sans",sans-serif!important;vertical-align:initial}.e-comebacker h1,.e-comebacker h2,.e-comebacker h3,.e-comebacker h4,.e-comebacker h5,.e-comebacker h6{font-size:15px!important;font-weight:initial!important;font-style:initial!important;margin:0!important}.e-comebacker button{padding:0!important;border:0!important;font:inherit!important;color:inherit!important;background:0 0!important;cursor:pointer}.e-comebacker a{color:#00f!important;text-decoration:none!important}.e-comebacker p{line-height: inherit; text-align: center;font-size: 16px; padding:0!important;margin:0!important}.e-comebacker__inner{width:100%;height:100%;max-width:700px;margin:0 auto;overflow:hidden auto;word-spacing:-5px}.e-comebacker__inner::before{content:"";display:inline-block;width:0;height:100%;height:100vh;vertical-align:middle}.e-comebacker__inner>* *{word-spacing:initial}.e-comebacker__content{box-sizing:border-box;display:none;background:#fff;padding:15px 25px;border-radius:4px;width:100%;vertical-align:middle;overflow:hidden auto}.e-comebacker__content.e-comebacker-active{display:inline-flex}.modal-leave{display:flex;width:100%}.modal-leave__info{box-sizing:border-box;flex-basis:60%;padding-right:10px}.modal-leave__product-view{flex-basis:40%;display:flex;align-items:center}.modal-leave .modal-leave__title{line-height: inherit;text-transform: none; font-size:36px!important;color:#ffb300;font-weight:700!important;margin-top:0!important;margin-bottom:8px!important;text-align:center}.modal-leave .modal-leave__motivation{line-height: inherit; font-size:19px!important;font-weight:600!important;text-align:center}.modal-leave .modal-leave__motivation>strong{color:#ffb300}.modal-leave__btn-motivation{text-decoration:underline}.modal-leave .modal-leave__text{line-height: inherit; font-size:16px!important;margin:12px auto 14px!important;text-align:center;padding:0 30px!important}.modal-leave__text .inner-red{color:#d32f2f;font-weight:700}.modal-leave__btn-wrapper{margin:0 auto;max-width:290px;text-align:center}.modal-leave .modal-leave__btn-next{border-radius:4px;font-size:21px!important;line-height:25px;width:100%;height:66px;background-color:#28a745!important;color:#fff!important;font-weight:700!important;transition:background-color .3s linear}.modal-leave .modal-leave__btn-next:hover{background-color:#1f8a37!important}.modal-leave .modal-leave__btn-no{color:#78909c!important;font-size:14px!important;margin:5px 0 0 0!important}.modal-leave .modal-leave__btn-no:hover{text-decoration:underline}.modal-leave__on-sale{position:relative;padding-top:5px;margin:0 auto}.modal-leave__sale-label{width:100px;height:100px;border-radius:50%;background:50%;position:absolute;top:-24px;left:-20px;color:#fff;background-color:#388e3c;box-shadow:0 5px 10px rgba(0,0,0,.15)!important;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:700;transform:rotate(-12deg)}.modal-leave__image{max-width:100%;max-height:310px}.modal-offer{width:100%}.modal-offer .modal-offer__title{line-height: inherit; text-transform: none; font-size:25px!important;font-weight:600!important;margin-bottom:8px;color:#c62828;text-align:center;padding:0 35px}.modal-offer__timer{margin-top:5px;text-align:center}.modal-offer__timer-time{font-size:30px;font-weight:700;color:#f44336}.modal-offer__promo{display:flex;justify-content:center;align-items:center;margin-top:8px}.modal-offer__price{text-align:center;flex-basis:42%;margin-right:20px}.modal-offer__price .__label{font-size:20px;margin-bottom:4px}.modal-offer__price .__value{font-size:43px;font-weight:700;line-height:1;color:#f44336}.modal-offer__price .__currency{font-size:.74em;margin-left:4px;text-transform:uppercase}.modal-offer__product{flex-basis:42%;text-align:center}.modal-offer__product .__image{max-width:100%;max-height:220px;margin-bottom: 0px;}.modal-offer__cong-text{max-width:570px;margin:16px auto 20px;text-align:center}.modal-offer__cong-text .__title{font-size:17px!important;font-weight:700!important;text-align:center;color:red!important;margin-bottom:6px!important}.modal-offer__cong-text p{margin-bottom:5px!important}.modal-offer__field{text-align:center;margin-bottom:5px}.modal-offer__form{padding-left:24px;}.modal-offer__field .__wrapper{display:inline-block;position:relative;width:100%;max-width:300px}.modal-offer__field .__label{box-sizing:border-box;position:absolute;left:0;top:50%;transform:translate(-100%,-50%);display:inline-block;width:100%;max-width:180px;padding-right:16px;text-align:right}.modal-offer__field .__input, .modal-offer__field .form-control{box-sizing:border-box;height:40px;font-size:17px;padding-left:17px;width:100%;border-radius:4px;border:1px solid #757575!important;font-weight: normal;}.modal-offer .modal-offer__btn-submit{box-sizing:border-box;position:relative;background-color:#16a835!important;background-image:-webkit-linear-gradient(90deg,#38a22e 1%,#3ab02a 100%)!important;background-image:-moz-linear-gradient(90deg,#38a22e 1%,#3ab02a 100%)!important;background-image:-ms-linear-gradient(90deg,#38a22e 1%,#3ab02a 100%)!important;background-image:-o-linear-gradient(90deg,#38a22e 1%,#3ab02a 100%)!important;background-image:linear-gradient(90deg,#38a22e 1%,#3ab02a 100%)!important;color:#fff!important;cursor:pointer;width:100%;max-width:300px;border-radius:4px;font-size:24px!important;font-weight:700!important;font-family:Arial,sans-serif!important;margin-top:6px;padding:10px!important}.modal-offer .modal-offer__btn-submit .__bg{position:absolute;left:0;top:0;box-sizing:border-box;display:inline-block;width:100%;height:100%;background-color:#16a835!important;background-image:-webkit-linear-gradient(90deg,#1f9913 1%,#2eae1d 100%)!important;background-image:-moz-linear-gradient(90deg,#1f9913 1%,#2eae1d 100%)!important;background-image:-ms-linear-gradient(90deg,#1f9913 1%,#2eae1d 100%)!important;background-image:-o-linear-gradient(90deg,#1f9913 1%,#2eae1d 100%)!important;background-image:linear-gradient(90deg,#1f9913 1%,#2eae1d 100%)!important;border-radius:inherit;transition:opacity .3s linear}.modal-offer .modal-offer__btn-submit .__text{position:relative;z-index:1}.modal-offer .modal-offer__btn-submit:hover .__bg{opacity:0}.pl_field_address_info{margin:0!important;padding:0!important;border:none!important;outline:0!important;position:absolute;z-index:-1;width:0!important;height:0!important}.popin-anim{-webkit-animation:280ms ease-out popin_appear;-moz-animation:280ms ease-out popin_appear;-o-animation:280ms ease-out popin_appear;animation:280ms ease-out popin_appear}@-webkit-keyframes popin_appear{from{transform:scale(.2);opacity:0}80%{transform:scale(1.05)}to{transform:scale(1);opacity:1}}@-moz-keyframes popin_appear{from{transform:scale(.2);opacity:0}80%{transform:scale(1.05)}to{transform:scale(1);opacity:1}}@-o-keyframes popin_appear{from{transform:scale(.2);opacity:0}80%{transform:scale(1.05)}to{transform:scale(1);opacity:1}}@keyframes popin_appear{from{transform:scale(.2);opacity:0}80%{transform:scale(1.05)}to{transform:scale(1);opacity:1}}.fadeIn-anim{-webkit-animation:280ms ease-out fadeIn_appear;-moz-animation:280ms ease-out fadeIn_appear;-o-animation:280ms ease-out fadeIn_appear;animation:280ms ease-out fadeIn_appear}@-webkit-keyframes fadeIn_appear{from{opacity:0}to{opacity:1}}@-moz-keyframes fadeIn_appear{from{opacity:0}to{opacity:1}}@-o-keyframes fadeIn_appear{from{opacity:0}to{opacity:1}}@keyframes fadeIn_appear{from{opacity:0}to{opacity:1}}
+    .e-comebacker strong {
+      font-weight: bold !important;
+    }
+    @media screen and (max-width: 640px) {
+      .e-comebacker {
+        display: none !important;
+      }
+    }
+  </style>
+
+
+
+
+<style>
+   
+
+    * .ffl {
+      font-family: 'roboto-fixed-line', sans-serif;
+      box-sizing: border-box;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    @media screen and (min-width: 469px) {
+      .ffl {
+        display: none;
+      }
+    }
+
+    .ffl {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 10;
+      background-color: #f00;
+      text-align: center;
+      width: 100%;
+      padding: 10px 30px;
+      opacity: 0;
+    }
+
+    .ffl__anim{
+      -webkit-animation: example 1.3s ease;
+      animation: example 1.3s ease;
+      opacity: 1;
+      
+    }
+    
+    @-webkit-keyframes example{
+      0%{
+        opacity:0
+      }
+      25%{
+        opacity:0
+      }
+      50%{
+        opacity:0
+      }
+      75%{
+        opacity:.9
+      }
+      100%{
+        opacity:1
+      }
+    }
+    
+    @keyframes example{
+      0%{
+        opacity:0
+      }
+      25%{
+        opacity:0
+      }
+      50%{
+        opacity:0
+      }
+      75%{
+        opacity:.9
+      }
+      100%{
+        opacity:1
+      }
+    }
+
+    .ffl__wrap {
+      position: relative;
+    }
+
+    .ffl__close {
+      position: absolute;
+      top: 0;
+      right: -20px;
+      color: #fff;
+      font-size: 25px;
+      font-family: serif;
+      line-height: 16px;
+      height: 16px;
+      width: 16px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .ffl__out {
+      display: none;
+    }
+
+    .ffl__text {
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .ffl__price {
+      font-size: 17px;
+      white-space: nowrap;
+      text-transform: lowercase;
+    }
+
+    .ffl__price-value {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .ffl__btn,
+    .ffl__btn:focus,
+    .ffl__btn:hover,
+    .ffl__btn:active {
+      background-color: #ffff00;
+      color: #f00;
+      border-radius: 3px;
+      padding: 7px 30px;
+      display: inline-block;
+      margin: 5px auto;
+      text-decoration: none;
+      -webkit-animation: blinker 2s cubic-bezier(1.0,0,0,1.0) infinite;
+      animation: blinker 2s cubic-bezier(1.0,0,0,1.0) infinite;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    @keyframes blinker {
+      from { opacity: 1.0; }
+      to { opacity: 0.7; }
+    }
+
+    @-webkit-keyframes blinker {
+      from { opacity: 1.0; }
+      to { opacity: 0.7; }
+    }
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: #fff;
+    }
+    @-moz-document url-prefix(){select{-webkit-text-indent:-2px;-moz-text-indent:-2px;text-indent:-2px}}
+  .modal-offer__field label{margin-left:0!important;}
+  </style>
+<script>
+    $(document).ready(function() {
+      setTimeout(function() {
+        $('.ffl').addClass('ffl__anim')
+      }, 300)
+    })
+
+    $(window).on('load resize', function() {
+      let fflHeight = $('.ffl').outerHeight();
+      if ($(window).width() < 469 && !$('.ffl').hasClass('ffl__out')) {
+        $('html').css('padding-bottom', fflHeight + 'px')
+      } else {
+        $('html').css('padding-bottom', '0')
+      }
+    })
+
+    $('.ffl__close').on('click', function(){
+      $('.ffl').addClass('ffl__out')
+      $('html').css('padding-bottom', '0')
+    })
+  </script>
+
+<style>
+  .myli-noli{display: inline-table;
+    width: 100%;}
+   .myli-noli2 {       display: inline-block;
+    margin-top: 0;
+    color: #25801f;}
+</style>
+
+<script>
+     var sizes={33:"50 кг",34:"55 кг",39:"60 кг",42:"65 кг",45:"70 кг",50:"75 кг",53:"80 кг",56:"85 кг",60:"90 кг",63:"95 кг",67:"100 кг",71:"105 кг",74:"110 кг",79:"115 кг"},defaultSize=17;$.each(sizes,function(e,t){$("#sizer").append($("<option></option>").attr("value",e).attr("selected",e==defaultSize).text(t))});var times={7:"2 месяца",14:"1 месяц",30:"2 недели",60:"1 неделя"},defaultTime=14;function calc(){var e=$(".calc-form .inp1").val(),t=(i=$(".calc-form .inp2").val())-(l=$(".calc-form .inp3").val()),e=parseInt(e.replace(/\D+/g,"")),i=parseInt(i.replace(/\D+/g,"")),l=parseInt(l.replace(/\D+/g,""));console.log(t),0<e&&0<i&&0<l&&(115<=t?($(".calc-form .line1").attr("style","visibility: display;"),$(".calc-form .line2").attr("style","visibility: display;"),$(".calc-form .line1").html('<span class="green">Вы в прекрасной форме.</span>'),$(".calc-form .line2").html("Для её поддержания достаточно принимать Leptigen Meridian Diet один раз в неделю.")):104<=t&&t<=114?($(".calc-form .line1").attr("style","visibility: display;"),$(".calc-form .line2").attr("style","visibility: display;"),$(".calc-form .line1").html("У вас не более 10 кг лишнего веса"),$(".calc-form .line2").html("Достаточно пройти 2-недельный курс Leptigen Meridian Diet.")):90<=t&&t<=103?($(".calc-form .line1").attr("style","visibility: display;"),$(".calc-form .line2").attr("style","visibility: display;"),$(".calc-form .line1").html("У вас более 18 кг лишнего веса"),$(".calc-form .line2").html("Чтобы от него избавиться – рекомендуем пройти полный курс Leptigen Meridian Diet. Ожидаемая потеря веса в первый месяц – от 8 до 17 кг.")):t<=89&&($(".calc-form .line1").attr("style","visibility: display;"),$(".calc-form .line2").attr("style","visibility: display;"),$(".calc-form .line1").html("У вас крайняя стадия ожирения"),$(".calc-form .line2").html("Срочно пройдите расширенный курс Leptigen Meridian Diet (от 10 до 14 недель), а также добавьте физические нагрузки. За это время можно сбросить от 25 кг до 40 кг.")))}$.each(times,function(e,t){$("#timer").append($("<option></option>").attr("value",e).attr("selected",e==defaultTime).text(t))}),$("select").change(()=>{var e=100,t=parseInt($("#timer").val()),i=parseInt($("#sizer").val()),e=i+i*t*(7==t?.25/14:14==t?.2/14:30==t?.15/14:.1/14);$("#yourNewPenisYeah")
+      .text(e.toFixed(2)+" кг")}),$("#timer").change(),
+      $(document).ready(function(){$(".calc-form input").change(function(){calc()}),$(".calc-form input").keyup(function(){calc()})});var vibr,par=location.hash.slice(1).split("~"),parl=par.length;2<parl&&(isp=par[4].replace(/\+/g," ")),
+      vibr="vibrate"in navigator?1:0;var count=1;$(function(){$(".try").click(function(){var e;count<2?($(this).attr("src","img/opened_box2.png"),$(this).addClass("empty"),count++,setTimeout(function(){document.getElementById("success02").className+=" animate",document.getElementById("successtip02").className+=" animateSuccessTip",document.getElementById("modal02").className+=" visible";document.getElementById("cntVal");document.querySelector(".sweet-overlay").style.display="block"},800)):document.getElementById("modal02").classList.contains("active")&&count<3&&!$(this).hasClass("empty")&&(count++,e=document.getElementById("discount"),$(this).replaceWith(e),$(e).addClass("show"),setTimeout(function(){resultWrapper.style.display="block"},1e3),setTimeout(function(){$("#boxes").slideUp(),$(".order_block").slideDown(),start_timer()},3500))})});var counter=1;$(document).ready(function(){$("#update").on("click",function(){document.getElementById("modal02").classList.add("active"),1==counter&&(counter++,$("#cntVal").html(function(e,t){return+t-1}))})});var resultWrapper=document.querySelector(".spin-result-wrapper"),wheel=document.querySelector(".wheel-img");function spin(){wheel.classList.contains("rotated")||(wheel.classList.add("super-rotation"),setTimeout(function(){resultWrapper.style.display="block"},8e3),setTimeout(function(){$(".spin-wrapper").slideUp(),$(".order_block").slideDown(),start_timer()},1e4),wheel.classList.add("rotated"))}var intr,time=600;function start_timer(){intr=setInterval(tick,1e3)}function tick(){--time;var e=Math.floor(time/60),t=time-60*e;0==e&&0==t&&clearInterval(intr),t=10<=t?t:"0"+t,$("#min").html("0"+e),$("#sec").html(t)}function hidemodal01(){0<vibr&&navigator.vibrate(70);document.getElementById("modal01").classList.remove("visible"),document.querySelector(".sweet-overlay").style.display="none"}function hidemodal02(){0<vibr&&navigator.vibrate(70);document.getElementById("modal02").classList.remove("visible"),document.querySelector(".sweet-overlay").style.display="none"}$(".ord_button").on("click",function(){$(".screenLock .msg .close").trigger("click")}),$(document).ready(function(){$(".close-popup").on("click",function(){resultWrapper.style.display="none"})}),$(document).ready(function(){$(".pop-up-button").on("click",function(){resultWrapper.style.display="none"})}),$("a").addClass("to_form"),$(".to_form").on("touchend, click",function(e){e.preventDefault(),$("body,html").animate({scrollTop:$(".zakaz").offset().top},400)});
+</script>
+</body>
+</html>
